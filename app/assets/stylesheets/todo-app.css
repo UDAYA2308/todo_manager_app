@@ -112,8 +112,8 @@ body {
 }
 
 .TodoList__todos-remove {
-    max-width: 10px;
-    max-height: 20px;
+    max-width: 15px;
+    max-height: 25px;
     margin-left: 10px;
     visibility: hidden;
 }

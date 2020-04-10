@@ -8,7 +8,6 @@ class UsersController < ApplicationController
     render plain: User.all.order(:name).map { |user| user.to_pleasant_string }.join("\n")
   end
 
-
   def login
     user_email = params[:email]
     user_password = params[:password]
@@ -17,7 +16,6 @@ class UsersController < ApplicationController
     response_text = "False" if user == nil
     render plain: response_text
   end
-
 
   # GET /users/1
   # GET /users/1.json

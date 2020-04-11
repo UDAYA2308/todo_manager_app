@@ -1,13 +1,13 @@
 <main class="TodoMain">
     <article>
         <h1 class="TodoPage__title"> My To-do List </h1>
-        <section class                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ="Todo">
+        <section class="Todo">
             <input type="text" class="Todo__text" placeholder="What’s next?" >
             <input type="date" class="Todo__date" value="date">
             <input type="button" class="Todo__add" value="Add">
         </section>
-        
-     <%= render partial: "todo-section" ,locals: {
+
+        <%= render partial: "todo-section" ,locals: {
             section_title: "Overdue",
             todos: Todo.overdue,
             completed_count: 0,

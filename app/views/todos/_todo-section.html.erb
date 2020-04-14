@@ -6,19 +6,17 @@
 
      <% todos.each do |todo|%>
         <ul class="TodoList">
-            <% if !todo.completed || display_completed %>
-                <li class="TodoList__todos">
-                    <input type="checkbox" class="TodoList__checkbox" <%= todo.completed ? "checked" : "" %> />
- 
-                    <p class=<%= todo.completed ? "TodoList__todos-text-completed" : "TodoList__todos-text" %>><%= todo.todo_text  %></p>
-                   
-                    <% if show_date %>
-                        <p class="TodoList__todos-dueDate"><%=todo.due_date.to_s(:short)%></p>
-                    <% end %>
-                    
-                    <img src="trash-can-outline.png" class="TodoList__todos-remove">
-                </li>
-            <% end %>
+            <li class="TodoList__todos">
+                <input type="checkbox" class="TodoList__checkbox" <%= todo.completed ? "checked" : "" %> />
+
+                <p class=<%= todo.completed ? "TodoList__todos-text-completed" : "TodoList__todos-text" %>><%= todo.todo_text  %></p>
+                
+                <% if show_date %>
+                    <p class="TodoList__todos-dueDate"><%=todo.due_date.to_s(:short)%></p>
+                <% end %>
+                
+                <img src="trash-can-outline.png" class="TodoList__todos-remove">
+            </li>
         </ul> 
     <% end %>
     

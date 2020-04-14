@@ -13,7 +13,6 @@
             completed_count: 0,
             total_count: (Todo.overdue.count - Todo.overdue.completed.count),
             show_date: true,
-            display_completed: false
         } %>
 
         <%= render partial: "todo-section" ,locals: {
@@ -22,7 +21,6 @@
             completed_count: Todo.due_today.completed.count,
             total_count: Todo.due_today.count,
             show_date: false,
-            display_completed: true
         } %>
 
 
@@ -32,7 +30,6 @@
             completed_count: Todo.due_later.completed.count,
             total_count: Todo.due_later.count,
             show_date: true,
-            display_completed: true
         } %>
        
     </article>

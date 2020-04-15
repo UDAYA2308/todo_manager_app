@@ -123,6 +123,7 @@ body {
 .TodoList__todos-remove {
     max-width: 15px;
     max-height: 25px;
+    margin-top: 4px;
     margin-left: 10px;
     visibility: hidden;
 }

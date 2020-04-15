@@ -8,12 +8,7 @@
         <ul class="TodoList">
             <li class="TodoList__todos">
                 <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
-                    <input
-                        class="TodoList-checkbox"
-                        name="completed"
-                        type="checkbox" <%= todo.completed ? "checked" : "" %>
-                        onclick="this.form.submit()"
-                    />
+                    <%= check_box_tag "completed","yes",todo.completed,class: "TodoList-checkbox", :onclick=>"submit()" %>
                 <% end %>
                 <p class=<%= todo.completed ? "TodoList__todos-text-completed" : "TodoList__todos-text" %>><%= todo.todo_text  %></p>
                 
@@ -22,11 +17,7 @@
                 <% end %>
             
                 <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
-                    <input
-                        class="TodoList__todos-remove"
-                        type="image"
-                        src="trash-can-outline.png"
-                    />
+                    <%= image_submit_tag("trash-can-outline.png",class: "TodoList__todos-remove") %>
                 <% end %>
             </li>
         </ul> 

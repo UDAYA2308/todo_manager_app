@@ -2,12 +2,12 @@
     <article>
         <h1 class="TodoPage__title"> My To-do List </h1>
        
-       <%= form_with(url: "/todos", method: "post",class: "Todo")  do %>    
-            <%= text_field_tag 'todo_text', nil , 
-                placeholder: "Whats's next?" ,
-                class: "Todo__text"
+        <%= form_with(url: "/todos", method: "post",class: "Todo")  do %>    
+            <%= text_field_tag 'todo_text', nil, 
+                                placeholder: "What's next?",
+                                class: "Todo__text"
             %>
-            <%= date_field_tag 'due_date',nil ,class: "Todo__date"%>
+            <%= date_field_tag 'due_date', nil, class: "Todo__date" %>
             <%= button_tag "Add", class: "Todo__add" %>
         <% end %>
 

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  skip_before_action :ensure_user_login
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -34,13 +34,13 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    User.create!(
+    user_new = User.create!(
       first_name: params[:first_name],
       last_name: params[:last_name],
       email: params[:email],
       password: params[:password],
     )
-
+    session[:current_user_id] = user_new.id
     redirect_to "/"
   end
 

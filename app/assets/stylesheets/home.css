@@ -1,0 +1,25 @@
+.Home-tite {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.Home-authenticate {
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.UserHeader {
+    font-size: 20px;
+    background-color: lightgray;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.User-error {
+    padding: 10px;
+    margin-bottom: 15px;
+    color: red;
+    font-size: 14px;
+}

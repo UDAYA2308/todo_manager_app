@@ -34,16 +34,13 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    user_name = params[:name]
-    user_email = params[:email]
-    user_password = params[:password]
-    user_new = User.create(
-      name: user_name,
-      email: user_email,
-      password: user_password,
+    User.create!(
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      email: params[:email],
     )
-    response_text = "New user added with user_id #{user_new.id}"
-    render plain: response_text
+
+    redirect_to "/"
   end
 
   # PATCH/PUT /users/1

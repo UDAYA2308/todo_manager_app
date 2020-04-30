@@ -1,4 +1,8 @@
 class Todo < ActiveRecord::Base
+  validates :todo_text, presence: true
+  validates :due_date, presence: true
+  validates :todo_text, length: { minimum: 3 }
+
   belongs_to :user
 
   def to_pleasant_string

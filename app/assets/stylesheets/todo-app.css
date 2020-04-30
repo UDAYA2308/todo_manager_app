@@ -98,6 +98,15 @@ body {
     letter-spacing: 0.1px;
 }
 
+.TodoList__todos-text-completed {
+    font-family: OpenSans;
+    font-size: 14px;
+    color: #453C52;
+    margin-left: 10px;
+    letter-spacing: 0.1px;
+    text-decoration: line-through;
+}
+
 .TodoList__todos:hover {
     background: #F1EDF7;
     border-radius: 4px;
@@ -112,7 +121,7 @@ body {
 }
 
 .TodoList__todos-remove {
-    max-width: 10px;
+    max-width: 15px;
     max-height: 20px;
     margin-left: 10px;
     visibility: hidden;
